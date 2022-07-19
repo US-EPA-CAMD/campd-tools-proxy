@@ -58,6 +58,9 @@ jobs:
         run: devops/scripts/cf-app-init.sh
       - name: Deploy
         run: devops/scripts/deploy.sh
+      - name: Add Network Policy
+        run: |
+          cf add-network-policy campd-tools-proxy --destination-app facility-map
   Stage-Deployment:
     needs: Test-Deployment
     runs-on: ubuntu-latest
@@ -92,3 +95,6 @@ jobs:
         run: devops/scripts/cf-app-init.sh
       - name: Deploy
         run: devops/scripts/deploy.sh
+      - name: Add Network Policy
+        run: |
+          cf add-network-policy campd-tools-proxy --destination-app facility-map
