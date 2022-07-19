@@ -27,6 +27,8 @@ jobs:
           path: devops
       - name: Configure Env Vars
         run: devops/scripts/environment-variables.sh
+        env:
+          ENV_VAR_PREFIX: EASEY
       - name: Install cf cli
         run: devops/scripts/install-cf-cli.sh
       - name: Login to cloud.gov

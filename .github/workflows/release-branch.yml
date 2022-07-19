@@ -19,6 +19,8 @@ jobs:
           path: devops
       - name: Configure Env Vars
         run: devops/scripts/environment-variables-noTag.sh
+        env:
+          ENV_VAR_PREFIX: EASEY
       - name: Package App
         run: devops/scripts/package-artifact.sh
         env:
@@ -42,6 +44,8 @@ jobs:
           path: devops
       - name: Configure Env Vars
         run: devops/scripts/environment-variables-noTag.sh TEST
+        env:
+          ENV_VAR_PREFIX: EASEY
       - name: Install cf cli
         run: devops/scripts/install-cf-cli.sh
       - name: Login to cloud.gov
@@ -79,6 +83,8 @@ jobs:
           path: devops
       - name: Configure Env Vars
         run: devops/scripts/environment-variables-noTag.sh STAGE
+        env:
+          ENV_VAR_PREFIX: EASEY
       - name: Install cf cli
         run: devops/scripts/install-cf-cli.sh
       - name: Login to cloud.gov
