@@ -1,0 +1,20 @@
+applications:
+  - name: ((name))
+    memory: ((memory))M
+    disk_quota: ((disk))M
+    instances: ((instances))
+    health-check-type: http
+    health-check-http-endpoint: /((path))/nginx_status
+    buildpacks:
+      - nginx_buildpack
+
+    # The NAMESERVER entered here is just to ensure that the nginx buildpack will successfully stage.
+    # The code in .profile will overwrite the environment variable at application startup to ensure
+    # that even apps on the "apps.internal" domain can be resolved.
+    env: 
+      NAMESERVER: 4.3.2.1
+
+    # You must specify all subpaths you want to the proxy to handle!
+    routes:
+      - route: ((host))/((path))/facility-map
+      - route: ((host))/((path))/program-insights
