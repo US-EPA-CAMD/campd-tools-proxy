@@ -1,0 +1,8 @@
+#THIS FILE SHOULD CONTAIN DEV SETTINGS AND CI/CD WORKFLOW WILL CHANGE SETTINGS BASED ON ENV
+name: campd-tools-proxy
+path: tools
+port: 8080
+memory: 64
+disk: 1024
+instances: 1
+host: campd-dev.app.cloud.gov

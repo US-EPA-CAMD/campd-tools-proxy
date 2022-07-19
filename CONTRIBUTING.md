@@ -1,17 +1,12 @@
-# Welcome!
+## Welcome!
 
-We're so glad you're thinking about contributing to a [open source project of the U.S. government](https://code.gov/)! If you're unsure about anything, just ask -- or submit the issue or pull request anyway. The worst that can happen is you'll be politely asked to change something. We love all friendly contributions.
+We’re so glad you’re thinking about contributing to an EPA open source project!
 
-We encourage you to read this project's CONTRIBUTING policy (you are here), its [LICENSE](LICENSE.md), and its [README](README.md).
+Please be aware that the Emissions and Allowance System for Energy (EASEY) is currently in development and has not yet been released to the public, so it is likely we will not immediately address your issue or pull request as your idea may already be in our product roadmap. 
 
-## Policies
+We encourage you to read this project’s CONTRIBUTING policy (you are here), its
+[LICENSE](https://github.com/US-EPA-CAMD/easey-emissions-api/blob/develop/LICENSE), and its [README](https://github.com/US-EPA-CAMD/easey-emissions-api/blob/develop/README.md).
 
-We want to ensure a welcoming environment for all of our projects. Our staff follow the [TTS Code of Conduct](https://18f.gsa.gov/code-of-conduct/) and all contributors should do the same.
+All contributions to this project will be released under the MIT dedication. By submitting a pull request or issue, you are agreeing to comply with this waiver of copyright interest.
 
-We adhere to the [18F Open Source Policy](https://github.com/18f/open-source-policy). If you have any questions, just [shoot us an email](mailto:18f@gsa.gov).
-
-## Public domain
-
-This project is in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/).
-
-All contributions to this project will be released under the CC0 dedication. By submitting a pull request or issue, you are agreeing to comply with this waiver of copyright interest.
+If you have any questions or want to read more, check out the [EPA Open Source Project Repo](https://github.com/USEPA/open-source-projects) and [EPA's Interim Open Source Code Guidance](https://developer.epa.gov/guide/open-source-code/).
