@@ -16,5 +16,6 @@ applications:
 
     # You must specify all subpaths you want to the proxy to handle!
     routes:
+      - route: ((host))/((path))/test-app
       - route: ((host))/((path))/facility-map
       - route: ((host))/((path))/program-insights
