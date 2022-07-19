@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: Test
-      url: https://campd-tst.app.cloud.gov/tools/facility-map
+      url: https://campd-tst.app.cloud.gov/tools/nginx_status
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
@@ -70,7 +70,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: Staging
-      url: https://campd-stg.app.cloud.gov/tools/facility-map
+      url: https://campd-stg.app.cloud.gov/tools/nginx_status
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
