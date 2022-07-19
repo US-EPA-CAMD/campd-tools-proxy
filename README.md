@@ -37,6 +37,22 @@ Here we use the [`nginx-buildpack`](https://docs.cloudfoundry.org/buildpacks/ngi
   `cf add-network-policy subpath-proxy --destination-app <appname>`
 1. Open `example.appdomain/<appname>` in your browser.
 
+## Routing Applications through proxy
+- Add a route for each app in the routes section of manifest.yml
+```
+routes:
+  - route: ((host))/((path))/facility-map
+  - route: ((host))/((path))/program-insights
+```
+- Add network policy for each app in ci/cd workflows
+```
+- name: Add Network Policy
+  run: |
+    cf add-network-policy campd-tools-proxy --destination-app facility-map
+    cf add-network-policy campd-tools-proxy --destination-app program-insights
+```
+- Ensure that each app is mapped to an internal route in the format `<appname>.apps.internal`
+
 ## License & Contributing
 This project is licensed under the MIT License. We encourage you to read this project’s [License](LICENSE), [Contributing Guidelines](CONTRIBUTING.md), and [Code of Conduct](CODE-OF-CONDUCT.md).
 
