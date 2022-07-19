@@ -1,8 +1,16 @@
 # CAMPD Tools Proxy
 
-## What's the problem?
+[![License](https://img.shields.io/github/license/US-EPA-CAMD/campd-tools-proxy)](https://github.com/US-EPA-CAMD/campd-tools-proxy/blob/develop/LICENSE)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=US-EPA-CAMD_campd-tools-proxy&metric=alert_status)](https://sonarcloud.io/dashboard?id=US-EPA-CAMD_campd-tools-proxy)
+[![Develop CI/CD](https://github.com/US-EPA-CAMD/campd-tools-proxy/workflows/Develop%20Branch%20Workflow/badge.svg)](https://github.com/US-EPA-CAMD/campd-tools-proxy/actions)
+[![Release CI/CD](https://github.com/US-EPA-CAMD/campd-tools-proxy/workflows/Release%20Branch%20Workflow/badge.svg)](https://github.com/US-EPA-CAMD/campd-tools-proxy/actions)
+![Issues](https://img.shields.io/github/issues/US-EPA-CAMD/campd-tools-proxy)
+![Forks](https://img.shields.io/github/forks/US-EPA-CAMD/campd-tools-proxy)
+![Stars](https://img.shields.io/github/stars/US-EPA-CAMD/campd-tools-proxy)
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/US-EPA-CAMD/campd-tools-proxy)
 
-Sometimes applications are sensitive to the URLs used to make requests, and misbehave when Cloud Foundry serves them from a route with a `--path`, either not responding or trying to find their assets in an unrelated location.
+## Description
+CAMPD tools proxy for correcting the behavior of R Shiny apps that are sensitive to the URLs used to make requests, and misbehave when Cloud Foundry serves them from a route with a `--path`, either not responding or trying to find their assets in an unrelated location such as the root "/" path.
 
 ### That's too vague... What's an example of an app that misbehaves?
 Running [R Shiny](https://shiny.rstudio.com/) apps on [Cloud Foundry](https://www.cloudfoundry.org/) works great thanks to the [R Buildpack](https://docs.cloudfoundry.org/buildpacks/r/index.html)... until you try to map your R Shiny app a route to with a `--path`! Then you'll see a `404 Not Found` message from the Shiny app. 
@@ -29,16 +37,8 @@ Here we use the [`nginx-buildpack`](https://docs.cloudfoundry.org/buildpacks/ngi
   `cf add-network-policy subpath-proxy --destination-app <appname>`
 1. Open `example.appdomain/<appname>` in your browser.
 
---- 
+## License & Contributing
+This project is licensed under the MIT License. We encourage you to read this project’s [License](LICENSE), [Contributing Guidelines](CONTRIBUTING.md), and [Code of Conduct](CODE-OF-CONDUCT.md).
 
-## Contributing
-
-See [CONTRIBUTING](CONTRIBUTING.md) for additional information.
-
-## Public domain
-
-This project is in the worldwide [public domain](LICENSE.md). As stated in [CONTRIBUTING](CONTRIBUTING.md):
-
-> This project is in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/).
->
-> All contributions to this project will be released under the CC0 dedication. By submitting a pull request, you are agreeing to comply with this waiver of copyright interest.
+## Disclaimer
+The United States Environmental Protection Agency (EPA) GitHub project code is provided on an "as is" basis and the user assumes responsibility for its use. EPA has relinquished control of the information and no longer has responsibility to protect the integrity , confidentiality, or availability of the information. Any reference to specific commercial products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply their endorsement, recommendation or favoring by EPA. The EPA seal and logo shall not be used in any manner to imply endorsement of any commercial product or activity by EPA or the United States Government.
